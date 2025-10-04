@@ -1,16 +1,44 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import ts from "@typescript-eslint/eslint-plugin";
+import parser from "@typescript-eslint/parser";
+import prettier from "eslint-plugin-prettier";
+import next from "eslint-config-next";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-});
-
-const eslintConfig = [
-    ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
+export default [
+    // TypeScript support for all TS/TSX files
+    {
+        files: ["**/*.ts", "**/*.tsx"],
+        languageOptions: {
+            parser,
+            parserOptions: {
+                project: "./tsconfig.json",
+                tsconfigRootDir: new URL(".", import.meta.url).pathname,
+            },
+        },
+        plugins: { ts, prettier },
+    },
+    // Frontend (Next.js web app)
+    {
+        files: ["apps/web/**/*.{ts,tsx}"],
+        languageOptions: {
+            globals: {
+                window: "readonly",
+                document: "readonly",
+            },
+        },
+        ...next,
+        ...nextCoreWebVitals,
+        ...nextTypescript,
+    },
+    // Backend (Node.js API + scraper)
+    {
+        files: ["apps/api/**/*.ts", "apps/scraper/**/*.ts", "packages/**/*.ts"],
+        languageOptions: {
+            globals: {
+                process: "readonly",
+                module: "readonly",
+            },
+        },
+    },
 ];
-
-export default eslintConfig;
