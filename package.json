@@ -1,29 +1,29 @@
 {
     "name": "smashdraw",
-    "version": "0.1.0",
     "private": true,
-    "scripts": {
-        "dev": "next dev --turbopack",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
+    "version": "0.1.0",
+    "author": "Alex Cadigan",
+    "description": "A fantasy tennis league platform.",
+    "license": "MIT",
+    "homepage": "https://github.com/AlexCadigan/SmashDraw#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AlexCadigan/SmashDraw.git"
     },
-    "dependencies": {
-        "next": "15.3.3",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0"
+    "bugs": {
+        "url": "https://github.com/AlexCadigan/SmashDraw/issues"
+    },
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "prettier": "prettier --write ."
     },
     "devDependencies": {
-        "@eslint/eslintrc": "^3",
-        "@tailwindcss/postcss": "^4",
-        "@types/node": "^20",
-        "@types/react": "^19",
-        "@types/react-dom": "^19",
-        "eslint": "^9",
-        "eslint-config-next": "15.3.3",
-        "eslint-config-prettier": "^10.1.5",
-        "prettier": "^3.5.3",
-        "tailwindcss": "^4",
-        "typescript": "^5"
+        "@types/node": "^24.6.1",
+        "prettier": "^3.6.2",
+        "tsx": "^4.20.6",
+        "typescript": "^5.9.3"
     }
 }
