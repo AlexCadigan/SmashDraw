@@ -1,19 +1,27 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Next.js: Debug App",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "env": {
-        "NODE_OPTIONS": "--inspect"
-      },
-      "console": "integratedTerminal",
-      "skipFiles": ["<node_internals>/**"],
-      "outputCapture": "std",
-      "cwd": "${workspaceFolder}"
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run scraper",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run", "runTournaments"],
+            "console": "integratedTerminal",
+            "skipFiles": ["<node_internals>/**"],
+            "outputCapture": "std",
+            "cwd": "${workspaceFolder}/apps/scraper"
+        },
+        {
+            "name": "Run web",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run", "dev"],
+            "console": "integratedTerminal",
+            "skipFiles": ["<node_internals>/**"],
+            "outputCapture": "std",
+            "cwd": "${workspaceFolder}/apps/web"
+        }
+    ]
 }
