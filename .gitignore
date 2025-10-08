@@ -1,8 +1,4 @@
-# dependencies
 node_modules/
-
-# next.js
 .next/
-
-# env files (can opt-in for committing if needed)
+logs/
 .env*
