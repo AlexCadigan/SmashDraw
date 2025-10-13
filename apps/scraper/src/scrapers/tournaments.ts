@@ -3,7 +3,12 @@ import { AtpTournamentApiResponse } from "../types/atpTournamentsApi";
 import { fetchApi } from "../utils/fetchApi";
 import { saveTournaments } from "@db/queries";
 
-async function scrapeTournaments() {
+/**
+ * Scrapes tennis tournament data and saves it to the database.
+ *
+ * @returns {Promise<void>} Resolves once the tournaments are successfully fetched and saved.
+ */
+async function scrapeTournaments(): Promise<void> {
     const data = await fetchApi<AtpTournamentApiResponse>({
         resource: API_RESOURCES.ATP_TOURNAMENTS,
     });
