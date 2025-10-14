@@ -1,6 +1,6 @@
 import { API_RESOURCES } from "@shared/constants";
 import { AtpTournamentApiResponse } from "../types/atpTournamentsApi";
-import { fetchApi } from "../utils/fetchApi";
+import { apiRequest } from "../utils/apiRequest";
 import { saveTournaments } from "@db/queries";
 
 /**
@@ -9,9 +9,9 @@ import { saveTournaments } from "@db/queries";
  * @returns {Promise<void>} Resolves once the tournaments are successfully fetched and saved.
  */
 async function scrapeTournaments(): Promise<void> {
-    const data = await fetchApi<AtpTournamentApiResponse>({
-        resource: API_RESOURCES.ATP_TOURNAMENTS,
-    });
+    const data = await apiRequest<AtpTournamentApiResponse>(
+        API_RESOURCES.ATP_TOURNAMENTS,
+    );
 
     if (!data) {
         return;
