@@ -5,10 +5,10 @@ import { ApiResource } from "@shared/constants";
 /**
  * Makes a standardized GET request to a specified API resource with built-in logging.
  *
- * @param {ApiResource} resource An object containing the API resource's `name` (used for log context)
+ * @param resource An object containing the API resource's `name` (used for log context)
  * and `endpoint` (the full URL to call).
  *
- * @returns {Promise<T | null>} A promise that resolves to the response data (typed as `T`) if successful,
+ * @returns A promise that resolves to the response data (typed as `T`) if successful,
  * or `null` if the request fails or throws an error.
  */
 export async function apiRequest<T>(resource: ApiResource): Promise<T | null> {

@@ -6,7 +6,7 @@ import { saveTournaments } from "@db/queries";
 /**
  * Scrapes tennis tournament data and saves it to the database.
  *
- * @returns {Promise<void>} Resolves once the tournaments are successfully fetched and saved.
+ * @returns Resolves once the tournaments are successfully fetched and saved.
  */
 async function scrapeTournaments(): Promise<void> {
     const data = await apiRequest<AtpTournamentApiResponse>(
