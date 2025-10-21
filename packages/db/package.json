@@ -2,5 +2,11 @@
     "name": "smashdrawdb",
     "version": "0.1.0",
     "private": true,
-    "type": "module"
+    "type": "module",
+    "scripts": {
+        "lint": "eslint ."
+    },
+    "dependencies": {
+        "@supabase/supabase-js": "^2.76.0"
+    }
 }
