@@ -18,10 +18,14 @@
         "packages/*"
     ],
     "scripts": {
-        "prettier": "prettier --write ."
+        "prettier": "prettier --write .",
+        "eslint": "npm run lint --workspace tennisstatsapi && npm run lint --workspace tennisscraper && npm run lint --workspace smashdrawwebapp && npm run lint --workspace smashdrawdb && npm run lint --workspace shared"
     },
     "devDependencies": {
-        "@types/node": "^24.6.1",
+        "eslint": "^9.37.0",
+        "eslint-config-next": "^15.5.6",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.4",
         "prettier": "^3.6.2",
         "tsx": "^4.20.6",
         "typescript": "^5.9.3"
