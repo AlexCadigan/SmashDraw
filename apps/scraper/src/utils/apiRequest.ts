@@ -1,5 +1,5 @@
 import axios, { AxiosError } from "axios";
-import { logger } from "./logger";
+import { logger } from "@shared/logger";
 import { ApiResource } from "@shared/constants";
 
 /**
