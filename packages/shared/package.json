@@ -1,0 +1,12 @@
+{
+    "name": "smashdrawshared",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "lint": "eslint ."
+    },
+    "dependencies": {
+        "dotenv": "^17.2.3"
+    }
+}
