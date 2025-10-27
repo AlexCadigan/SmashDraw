@@ -4,9 +4,13 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "gen:types": "supabase gen types typescript --project-id obcrthadhlbzgjczalfr > src/types.ts",
         "lint": "eslint ."
     },
     "dependencies": {
         "@supabase/supabase-js": "^2.76.0"
+    },
+    "devDependencies": {
+        "supabase": "^2.53.6"
     }
 }
