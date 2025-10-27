@@ -3,6 +3,10 @@ import path from "path";
 
 dotenv.config({ path: path.resolve(import.meta.dirname, "../../../.env") });
 
+/**
+ * Environment configuration object containing required environment variables
+ * used throughout the application.
+ */
 export const ENV = {
     SUPABASE_URL: requireEnvVar("SUPABASE_URL"),
     SERVICE_ROLE_API_KEY: requireEnvVar("PRIVATE_SUPABASE_SERVICE_ROLE_KEY"),
