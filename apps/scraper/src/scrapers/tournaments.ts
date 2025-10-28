@@ -1,6 +1,6 @@
 import { API_RESOURCES } from "@shared/constants";
 import { AtpTournamentApiResponse } from "../types/atpTournamentsApi";
-import { apiRequest } from "../utils/apiRequest";
+import { apiRequest } from "@shared/apiRequest";
 import { saveTournaments } from "@db/queries";
 
 /**
