@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 
@@ -17,8 +17,12 @@ export const metadata: Metadata = {
     description: "Fantasy tennis made easy",
     keywords: ["fantasy tennis", "smashdraw", "tennis bracket"],
     authors: [{ name: "Alex Cadigan" }],
-    viewport: "width=device-width, initial-scale=1",
     icons: { icon: "/favicon.ico" },
+};
+
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
 };
 
 /**
